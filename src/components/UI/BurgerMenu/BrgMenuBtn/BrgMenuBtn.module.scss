@@ -1,0 +1,45 @@
+.buttonContainer {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: end;
+
+    .button {
+        width: 40px;
+        height: 100%;
+
+        margin-right: 5px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        border-radius: 5px;
+
+        &:hover {
+            background-color: orange;
+        }
+
+        * {
+            width: 80%;
+            height: 5px;
+            margin: auto;
+            border-radius: 2.5px;
+            background-color: white;
+            transition: all 0.3s;
+        }
+
+        &Close {
+            @extend .button;
+
+            :nth-child(1) {
+                transform: rotate(-45deg) translate(-10px, 0px) scaleX(0.6);
+            }
+
+            :nth-child(3) {
+                transform: rotate(45deg) translate(-10px, 0px) scaleX(0.6);
+            }
+        }
+    }
+}
