@@ -15,10 +15,20 @@ const config: StorybookConfig = {
       options: {
         rules: [
           {
-            test: /\.(css|scss|sass)$/i,
+            test: /\.module\.(css|scss|sass)$/i,
             use: [
               'style-loader',
-              'css-loader',
+              //'css-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  esModule: false,
+                  modules: {
+                    mode: 'local',
+                    localIdentName: '[name]__[local]--[hash:base64:5]',
+                  },
+                },
+              },
               {
                 loader: 'sass-loader',
                 options: { implementation: sass },

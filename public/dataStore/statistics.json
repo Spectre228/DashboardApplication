@@ -1,0 +1,68 @@
+[
+  {
+   "name": "Lucky Stars Hotel",
+   "rating": 4.92,
+   "featuresRatings": {
+        "Comfort": 5,
+        "Food": 4.8,
+        "Staff Hospitality": 5,
+        "Entartaining Facilities": 4.95,
+        "Price": 4.9
+   }
+  },
+  {
+   "name": "Gentle Desert Hotel",
+   "rating": 4.72,
+   "featuresRatings": {
+        "Comfort": 4.8,
+        "Food": 4.6,
+        "Staff Hospitality": 4.7,
+        "Entartaining Facilities": 4.9,
+        "Price": 4.8
+   }
+  },
+  {
+   "name": "Continental Hotel",
+   "rating": 5,
+   "featuresRatings": {
+        "Comfort": 5,
+        "Food": 5,
+        "Staff Hospitality": 5,
+        "Entartaining Facilities": 5,
+        "Price": 5
+   }
+  },
+  {
+   "name": "Overlook Hotel",
+   "rating": 4.3,
+   "featuresRatings": {
+        "Comfort": 4.7,
+        "Food": 4.1,
+        "Staff Hospitality": 4,
+        "Entartaining Facilities": 4.6,
+        "Price": 5
+   }
+  },
+  {
+   "name": "Dolphin Hotel",
+   "rating": 3.9,
+   "featuresRatings": {
+        "Comfort": 5,
+        "Food": 4.1,
+        "Staff Hospitality": 3.7,
+        "Entartaining Facilities": 4.3,
+        "Price": 3.6
+   }
+  },
+  {
+   "name": "Oasis Hotel",
+   "rating": 4.4,
+   "featuresRatings": {
+        "Comfort": 5,
+        "Food": 4,
+        "Staff Hospitality": 4.2,
+        "Entartaining Facilities": 4.1,
+        "Price": 4.9
+   }
+  }
+ ]

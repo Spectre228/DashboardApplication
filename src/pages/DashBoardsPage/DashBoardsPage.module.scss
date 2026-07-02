@@ -1,0 +1,22 @@
+.mainContainer {
+    width: 750px;
+    height: 225px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gridContainer {
+    width: 750px;
+    height: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(243.33px, 1fr));
+    grid-auto-rows: 200px;
+    align-items: stretch;
+    gap: 10px;
+}

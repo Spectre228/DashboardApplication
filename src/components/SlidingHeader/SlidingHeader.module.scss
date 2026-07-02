@@ -1,0 +1,20 @@
+.header {
+    height: fit-content;
+    overflow-x: clip;
+    overflow-y: visible;
+
+    > * {
+        margin: 0px;
+        white-space: nowrap;
+        transition: transform 0.2s;
+        mask-image: linear-gradient(to right, black 90%, transparent 100%);
+        --reveal-shift: 0px;
+    }
+
+    &:hover {
+        > * {
+            transform: translateX(var(--reveal-shift));
+            mask-image: none;
+        }
+    }
+}
