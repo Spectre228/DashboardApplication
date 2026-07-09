@@ -1,7 +1,5 @@
 import styles from "./BrgMenuBtn.module.scss";
 
-//type onClickHandler = () => void
-
 interface BrgMenuBtnPrps {
     onClickFunc: () => void,
     isMenuActive: boolean,

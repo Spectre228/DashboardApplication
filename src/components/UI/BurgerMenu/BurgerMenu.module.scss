@@ -32,6 +32,24 @@
             @extend .link;
             background-color: rgb(0, 0, 71);
             border-color: white;
+
+            @media(max-width: 1150px) {
+                border: 1px solid white !important;
+                border-top: none !important;
+                border-bottom: none !important;
+            }
+        }
+
+        @media(max-width: 1150px) {
+            width: 125px;
+            min-width: 125px;
+            height: 100%;
+
+            border: none;
+            border-radius: 0px;
+
+            align-content: center;
+            text-align: center;
         }
     }
 
@@ -53,6 +71,35 @@
         > * {
             visibility: visible;
             opacity: 1;
+        }
+    }
+
+    @media(max-width: 1150px) {
+        position: static;
+
+        width: 100vw;
+        height: 50px;
+
+        margin-bottom: 10px;
+
+        flex-direction: row;
+        justify-content: end;
+        gap: 0px;
+
+        transition: none;
+        transform: translateX(0);
+
+        border-radius: 10px;
+
+        > * {
+            visibility: visible;
+            opacity: 1;
+            transition: none;
+        }
+
+        :nth-child(1) {
+            visibility: hidden;
+            opacity: 0;
         }
     }
 }

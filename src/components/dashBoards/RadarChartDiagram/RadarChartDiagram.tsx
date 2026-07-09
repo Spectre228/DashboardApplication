@@ -1,9 +1,7 @@
-import { ComponentPropsWithoutRef, CSSProperties, JSX } from 'react'
+import { JSX } from 'react'
 import { BaseTickContentProps, Margin, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, Tooltip } from 'recharts'
-import { useGetHotelsFeaturesInfoQuery } from '../../../hooks/useGetHotelsFeaturesInfoQuery';
 import styles from "./RadarChartDiagram.module.scss";
 import SlidingHeader from '../../SlidingHeader/SlidingHeader';
-import ColumnTextTickIcon from '../CustomTickIcons/ColumnTextTickIcon/ColumnTextTickIcon';
 import { ChartBaseProps } from '../../../appData/types';
 import { AxisTick } from 'recharts/types/util/types';
 

@@ -1,13 +1,10 @@
-import { Bar, BarChart, CartesianGrid, Legend, Tooltip, TooltipContentProps, XAxis, XAxisTickContentProps, YAxis, YAxisTickContentProps } from 'recharts';
-import { useGetStatisticsQuery } from '../../../store/slices/StatisticsApi';
+import { Bar, BarChart, CartesianGrid, Tooltip, XAxis, XAxisTickContentProps, YAxis, YAxisTickContentProps } from 'recharts';
 import styles from "./BarChartDiagram.module.scss";
-import { PictogramTickIcon } from '../CustomTickIcons/PictogramTickIcon/PictogramTickIcon';
-import { ComponentPropsWithoutRef, JSX } from 'react';
+import { JSX } from 'react';
 import SlidingHeader from '../../SlidingHeader/SlidingHeader';
 import { ChartBaseProps } from '../../../appData/types';
-import ColumnTextTickIcon from '../CustomTickIcons/ColumnTextTickIcon/ColumnTextTickIcon';
 import { AxisTick } from 'recharts/types/util/types';
-import CustomTooltip from '../Tooltips/CustomTooltip';
+import { useScrollModToggler } from '../../../hooks/useScrollModToggler';
 
 interface BarChartDiagramProps extends ChartBaseProps {
   dataKeys: {
@@ -15,17 +12,11 @@ interface BarChartDiagramProps extends ChartBaseProps {
     barScales: string,
   },
   yAxisWidth: number,
+  scrollTransitionWidth: number,
   yAxisTicks?: AxisTick[],
   xAxisTick?: (props: XAxisTickContentProps) => JSX.Element,
   yAxisTick?: (props: YAxisTickContentProps) => JSX.Element,
-  //tooltip?: (props: TooltipContentProps) => JSX.Element,
 };
-
-// const headerStyles = {
-//   marginTop: "0px",
-//   marginBottom: "10px",
-//   marginLeft: "10px",
-// };
 
 export const BarChartDiagram = (
               {
@@ -34,6 +25,7 @@ export const BarChartDiagram = (
                 headerStyles,
                 chartStyles,
                 yAxisWidth,
+                scrollTransitionWidth,
                 data,
                 dataKeys,
                 yAxisTicks,
@@ -43,8 +35,11 @@ export const BarChartDiagram = (
                 ...otherProps
               }: BarChartDiagramProps
              ) => {
+  const [outerContRef, isScrollable] = useScrollModToggler(scrollTransitionWidth);
+  
   return (
-    <div className={styles.diagram}
+    <div className={`${styles.diagram} ${isScrollable ? styles.scrollable : ""}`}
+               ref={outerContRef}
                    {...otherProps}
     >
         <SlidingHeader headerType={headerType}

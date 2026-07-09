@@ -7,6 +7,10 @@
     background-color: rgb(0, 0, 119);
     border-radius: 10px;
 
+    @media(max-width: 375px) {
+        width: auto;
+    }
+
     .controlsArea {
         display: flex;
         flex-direction: row;

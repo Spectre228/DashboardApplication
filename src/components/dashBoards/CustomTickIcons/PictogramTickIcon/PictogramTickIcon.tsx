@@ -3,11 +3,7 @@ import { BaseTickContentProps } from "recharts/types/util/types";
 
 interface PictogramTickIconProps extends BaseTickContentProps {
   pictogram: string,
-  // dx?: number,
-  // dy?: number,
-  // fontSize?: number,
   otherSvgTextElementProps?: SVGTextElementAttributes<SVGTextElement>,
-  //SVGTextProps: SVGTextEleme
 }
 
 export const PictogramTickIcon = (

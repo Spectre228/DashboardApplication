@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementType, RefObject, useEffect, useRef,  } from "react";
+import { ComponentPropsWithoutRef, ElementType, useEffect, useRef  } from "react";
 import styles from "./SlidingHeader.module.scss";
 
 interface SlidingHeaderProps extends ComponentPropsWithoutRef<"div"> {

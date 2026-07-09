@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import { routes } from "../appData/routes";
 import WelcomeMenuPage from "../pages/WelcomeMenuPage/WelcomeMenuPage";
 

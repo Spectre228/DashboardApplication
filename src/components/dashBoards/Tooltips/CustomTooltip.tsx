@@ -1,5 +1,4 @@
-import { TooltipContentProps, TooltipPayload } from "recharts";
-//import { NameType, ValueType } from "recharts/types/component/DefaultTooltipContent";
+import { TooltipPayload } from "recharts";
 
 interface CustomTooltipProps {
   active: boolean,

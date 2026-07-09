@@ -1,17 +1,17 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { HotelRecord } from "../../appData/types";
 
-export const statisticsApi = createApi(
+export const hotelsInfoApi = createApi(
     {
-        reducerPath: "statistics",
+        reducerPath: "hotelsInfo",
         baseQuery: fetchBaseQuery(
             {
-                baseUrl: "/dataStore/statistics.json",
+                baseUrl: "/dataStore/hotelsInfo.json",
             }
         ),
         endpoints: (builder) => {
             return {
-                getStatistics: builder.query<HotelRecord[], {}>(
+                getHotelsInfoData: builder.query<HotelRecord[], {}>(
                     {
                         query: () => "",
                     }
@@ -21,4 +21,4 @@ export const statisticsApi = createApi(
     }
 );
 
-export const { useGetStatisticsQuery } = statisticsApi;
+export const { useGetHotelsInfoDataQuery } = hotelsInfoApi;

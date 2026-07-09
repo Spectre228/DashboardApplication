@@ -21,10 +21,7 @@ export interface ChartBaseProps extends ComponentPropsWithoutRef<"div"> {
 
     chartStyles?: CSSProperties,
 
-    data: {
-      name: string,
-      rating: number,
-    }[],
+    data: object[],
 
     tooltip?: (props: TooltipContentProps) => JSX.Element,
 };

@@ -119,7 +119,7 @@ export const BarchartWithCustomTicks: Story = {
         return (
             <BarChartDiagram yAxisTick={yAxisTick}
                              xAxisTick={xAxisTick}
-                             {...args}
+                                       {...args}
             />
         )
     }
