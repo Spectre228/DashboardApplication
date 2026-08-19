@@ -15,7 +15,7 @@ export const useHotelsFeaturesInfoData = (showRadarcharts: boolean, hotelsInfoDa
             cachedFeaturesInfoData.current = formFeaturesInfoData(hotelsInfoData);
             return cachedFeaturesInfoData.current;
           } else {
-            return null;
+            return undefined;
           }
         },
         [showRadarcharts, hotelsInfoData]

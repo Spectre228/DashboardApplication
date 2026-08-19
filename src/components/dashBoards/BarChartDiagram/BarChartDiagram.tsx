@@ -1,24 +1,10 @@
-import { Bar, BarChart, CartesianGrid, Tooltip, XAxis, XAxisTickContentProps, YAxis, YAxisTickContentProps } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts';
 import styles from "./BarChartDiagram.module.scss";
-import { JSX } from 'react';
 import SlidingHeader from '../../SlidingHeader/SlidingHeader';
-import { ChartBaseProps } from '../../../appData/types';
-import { AxisTick } from 'recharts/types/util/types';
 import { useScrollModToggler } from '../../../hooks/useScrollModToggler';
+import { BarChartDiagramProps } from './BarChartDiagram.types';
 
-interface BarChartDiagramProps extends ChartBaseProps {
-  dataKeys: {
-    barNames: string,
-    barScales: string,
-  },
-  yAxisWidth: number,
-  scrollTransitionWidth: number,
-  yAxisTicks?: AxisTick[],
-  xAxisTick?: (props: XAxisTickContentProps) => JSX.Element,
-  yAxisTick?: (props: YAxisTickContentProps) => JSX.Element,
-};
-
-export const BarChartDiagram = (
+export const BarChartDiagram = <DT,>(
               {
                 objectName,
                 headerType,
@@ -33,7 +19,7 @@ export const BarChartDiagram = (
                 yAxisTick,
                 tooltip,
                 ...otherProps
-              }: BarChartDiagramProps
+              }: BarChartDiagramProps<DT>
              ) => {
   const [outerContRef, isScrollable] = useScrollModToggler(scrollTransitionWidth);
   

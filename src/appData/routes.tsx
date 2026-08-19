@@ -1,14 +1,10 @@
-import { ReactNode } from "react";
 import DashBoardsPage from "../pages/DashBoardsPage/DashBoardsPage";
 import SettingsPage from "../pages/SettingsPage/SettingsPage";
+import { Navigate } from "react-router";
+import { RouteReckord } from "./types";
 
-interface routeReckord {
-    name: string,
-    path: string,
-    element: ReactNode,
-};
-
-export const routes: routeReckord[] = [
+export const routes: RouteReckord[] = [
     {name: "DashBoards", path: "/dashBoards", element: <DashBoardsPage/>},
     {name: "Settings", path: "/settings", element: <SettingsPage/>},
+    {name: "Other", path: "*", element: <Navigate to="/dashBoards" replace/>},
 ];

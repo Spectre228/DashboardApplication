@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router";
 import { routes } from "../appData/routes";
-import WelcomeMenuPage from "../pages/WelcomeMenuPage/WelcomeMenuPage";
 
 const AppRouter = () => {
   return (
@@ -11,8 +10,6 @@ const AppRouter = () => {
                                 element={route.element}/>
             )
         }
-
-        <Route path="*" element={<WelcomeMenuPage/>}/>
     </Routes>
   )
 };

@@ -1,19 +1,32 @@
-import { ComponentPropsWithoutRef, CSSProperties, JSX } from "react";
+import { ComponentPropsWithoutRef, CSSProperties, JSX, ReactNode } from "react";
 import { TooltipContentProps } from "recharts/types/component/Tooltip";
+
+export interface RouteReckord {
+    name: string,
+    path: string,
+    element: ReactNode,
+};
+
+interface FeaturesRatings {
+    comfort: number,
+    staffHospitality: number,
+    food: number,
+    entartainmentFacilities: number,
+    price: number,
+}
+
+export interface EntityRecord {
+    name: string,
+    rating: number,
+}
 
 export interface HotelRecord {
     name: string,
     rating: number,
-    featuresRatings: {
-        comfort: number,
-        staffHospitality: number,
-        food: number,
-        entartainmentFacilities: number,
-        price: number,
-    },
+    featuresRatings: FeaturesRatings,
 };
 
-export interface ChartBaseProps extends ComponentPropsWithoutRef<"div"> {
+export interface ChartBaseProps<DT> extends ComponentPropsWithoutRef<"div"> {
     objectName: string,
           
     headerType: "h1" | "h2" | "h3" | "h4" | "h5" | "h6",
@@ -21,7 +34,7 @@ export interface ChartBaseProps extends ComponentPropsWithoutRef<"div"> {
 
     chartStyles?: CSSProperties,
 
-    data: object[],
+    data: DT[],
 
     tooltip?: (props: TooltipContentProps) => JSX.Element,
 };

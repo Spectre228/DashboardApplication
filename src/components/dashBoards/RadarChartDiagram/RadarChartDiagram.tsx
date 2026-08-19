@@ -1,22 +1,9 @@
-import { JSX } from 'react'
-import { BaseTickContentProps, Margin, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, Tooltip } from 'recharts'
+import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, Tooltip } from 'recharts'
 import styles from "./RadarChartDiagram.module.scss";
 import SlidingHeader from '../../SlidingHeader/SlidingHeader';
-import { ChartBaseProps } from '../../../appData/types';
-import { AxisTick } from 'recharts/types/util/types';
+import { RadarChartDiagramProps } from './RadarChartDiagram.types';
 
-interface RadarChartDiagramProps extends ChartBaseProps {
-    dataKeys: {
-      vertices: string,
-      dataScale: string,
-    },
-    chartInnerMargins?: Partial<Margin>,
-    radiusAxisTicks?: AxisTick[],
-    radiusAxisTicksSize?: number,
-    angleAxisTick?: (props: BaseTickContentProps) => JSX.Element,
-};
-
-export const RadarChartDiagram = (
+export const RadarChartDiagram = <DT,>(
               {
                 objectName,
                 headerType,
@@ -30,7 +17,7 @@ export const RadarChartDiagram = (
                 angleAxisTick,
                 tooltip,
                 ...otherProps
-              }: RadarChartDiagramProps
+              }: RadarChartDiagramProps<DT>
              ) => {
   return (
     <div className={styles.diagram}

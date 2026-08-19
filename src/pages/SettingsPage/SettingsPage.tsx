@@ -2,7 +2,6 @@ import { useSelector, useDispatch } from "react-redux";
 import type { AppDispatch, RootState } from "../../store/store";
 import { toggleBarchartShow, toggleRadarchartsShow } from "../../store/slices/Settings"
 import SlidingHeader from "../../components/SlidingHeader/SlidingHeader";
-import BurgerMenu from "../../components/UI/BurgerMenu/BurgerMenu";
 import styles from "./SettingsPage.module.scss";
 import { ChangeEvent } from "react";
 
@@ -13,7 +12,6 @@ const SettingsPage = () => {
 
   return (
     <div style={{width: "100%"}}>
-      <BurgerMenu/>
       <div className={styles.chartDisplayControlsLayout}>
         <SlidingHeader headerType="h3"
                        title="Charts Display Settings"

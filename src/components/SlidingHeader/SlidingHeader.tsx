@@ -7,6 +7,9 @@ interface SlidingHeaderProps extends ComponentPropsWithoutRef<"div"> {
 };
 
 const SlidingHeader = ({headerType, title, ...otherProps}: SlidingHeaderProps) => {
+  
+  const HeaderTag = headerType as ElementType;
+
   const headerRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(
@@ -21,8 +24,6 @@ const SlidingHeader = ({headerType, title, ...otherProps}: SlidingHeaderProps) =
     },
     [headerRef.current]
   );
-
-  const HeaderTag = headerType as ElementType;
 
   return (
     <div className={styles.header}
