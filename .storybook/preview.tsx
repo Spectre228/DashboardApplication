@@ -1,6 +1,7 @@
-import type { Preview } from '@storybook/react-webpack5'
+import type { Preview } from '@storybook/react';
 import { Provider } from 'react-redux';
 import { store } from '../src/store/store';
+import "../src/App.styles.scss";
 
 const preview: Preview = {
   parameters: {
