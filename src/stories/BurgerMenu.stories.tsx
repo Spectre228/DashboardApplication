@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import { ComponentProps } from "react";
 import BurgerMenu from "../components/UI/BurgerMenu/BurgerMenu";
 import { BrowserRouter } from "react-router";
-import AppRouter from "../components/AppRouter";
+import AppRouter from "../app/routers/AppRouter";
 
 type StoryProps = ComponentProps<typeof BurgerMenu>;
 

@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import { routes } from "../appData/routes";
+import { routes } from "./routes";
 
 const AppRouter = () => {
   return (
