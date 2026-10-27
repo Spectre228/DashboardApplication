@@ -1,0 +1,1 @@
+export { BarChartDiagram } from "./ui/BarChartDiagram";

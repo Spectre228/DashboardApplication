@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import burgerMenuActivationReducer from "./slices/burgerMenuActivation";
-import settingsReducer from "./slices/Settings";
-import { hotelsInfoApi } from "./slices/HotelsInfoApi";
+import { BurgerMenuActivationReducer } from "../../widgets/BurgerMenu";
+import { SettingsReducer } from "../../pages/SettingsPage";
+import { hotelsInfoApi } from "../../pages/DashBoardsPage";
 
 export const store = configureStore(
   {
     reducer: {
-      menuActiveness: burgerMenuActivationReducer,
-      settings: settingsReducer,
+      menuActiveness: BurgerMenuActivationReducer,
+      settings: SettingsReducer,
       [hotelsInfoApi.reducerPath]: hotelsInfoApi.reducer,
     },
     middleware: (getDefaultMiddleware) => {
@@ -16,5 +16,7 @@ export const store = configureStore(
   }
 );
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+declare global {
+  export type RootState = ReturnType<typeof store.getState>;
+  export type AppDispatch = typeof store.dispatch;
+}

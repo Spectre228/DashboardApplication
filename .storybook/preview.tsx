@@ -1,7 +1,6 @@
 import type { Preview } from '@storybook/react';
 import { Provider } from 'react-redux';
-import { store } from '../src/store/store';
-import "../src/App.styles.scss";
+import { store } from '../src/app';
 
 const preview: Preview = {
   parameters: {
@@ -15,6 +14,20 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <Provider store={store}>
+        <style>
+          {
+            `
+              * {
+                text-decoration: none;
+                color: white;
+              }
+
+              body {
+                background-color: black;
+              }
+            `
+          }
+        </style>
         <Story />
       </Provider>
     ),

@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router';
 import AppRouter from './routers/AppRouter';
 import "./styles/App.styles.scss";
-import BurgerMenu from '../components/UI/BurgerMenu/BurgerMenu';
+import { BurgerMenu } from '../widgets/BurgerMenu';
 
 const App = () => {
   return (
